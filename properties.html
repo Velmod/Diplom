@@ -5,13 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ваши объекты недвижимости</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .back-button {
+            padding: 10px 30px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Ваши объекты недвижимости</h1>
+        <div class="logo-container">
+            <img src="D:\Учёба\Практика 02\resourses\logo.png" alt="Логотип" class="logo">
+            <h1 class="site-title">Lev's home</h1>
+        </div>
     </header>
 
-    <main>
+    <main style="margin-top: 10px;">
+        <a onclick="location.href='dashboard.html'" class="back-button">&#8592; Назад</a>
         <table>
             <thead>
                 <tr>
