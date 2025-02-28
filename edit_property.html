@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить/Редактировать объект недвижимости</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Добавить/Редактировать объект недвижимости</h1>
+    </header>
+
+    <main>
+        <form>
+            <label for="property-name">Название объекта:</label>
+            <input type="text" id="property-name" required>
+            <label for="address">Адрес:</label>
+            <input type="text" id="address" required>
+            <label for="description">Описание:</label>
+            <textarea id="description" required></textarea>
+            <label for="status">Статус аренды:</label>
+            <select id="status">
+                <option value="free">Свободен</option>
+                <option value="occupied">Занят</option>
+            </select>
+            <button type="submit">Сохранить</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Связь с поддержкой:<a style="word-spacing: 15px;"> +79627012525 Lev.Gorshkov@yandex.ru</a></p>
+        <p>"Lev's home" - данный сайт был сделан в рамках выпускной квалификационной работы и предназначен для демонстрации умений студента Горшкова Льва Александровича группы 32919/12</p>
+    </footer>
+</body>
+</html>

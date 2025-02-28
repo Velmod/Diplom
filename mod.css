@@ -1,0 +1,66 @@
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Окно фиксировано */
+    z-index: 1; /* На переднем плане */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Прокрутка при необходимости */
+    background-color: rgb(0, 0, 0); /* Черный фон */
+    background-color: rgba(0, 0, 0, 0.4); /* Полупрозрачный черный фон */
+}
+
+.modal-content {
+    background-color: #fefefe; /* Белый фон */
+    margin: 15% auto; /* 15% сверху и центрирование */
+    padding: 20px; /* Отступы */
+    border: 1px solid #888; /* Рамка */
+    width: 300px; /* Ширина модального окна */
+    border-radius: 5px; /* Закругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для глубины */
+}
+
+.close {
+    color: #aaa; /* Цвет для кнопки закрытия */
+    float: right; /* Справа */
+    font-size: 28px; /* Размер шрифта */
+    font-weight: bold; /* Жирный текст */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Цвет при наведении */
+    text-decoration: none; /* Убираем подчеркивание */
+    cursor: pointer; /* Указатель */
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение */
+}
+
+label {
+    margin-top: 10px; /* Отступ сверху */
+}
+
+input {
+    padding: 10px; /* Отступ внутри полей ввода */
+    margin-top: 5px; /* Отступ сверху */
+    border: 1px solid #ccc; /* Рамка */
+    border-radius: 4px; /* Закругленные углы */
+}
+
+button[type="submit"] {
+    margin-top: 15px; /* Отступ сверху */
+    padding: 10px; /* Отступ внутри кнопки */
+    background-color: #4CAF50; /* Зеленый фон */
+    color: white; /* Белый текст */
+    border: none; /* Без рамки */
+    border-radius: 4px; /* Закругленные углы */
+    cursor: pointer; /* Указатель */
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049; /* Темнее при наведении */
+}
