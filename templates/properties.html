@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ваши объекты недвижимости</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .back-button {
+            padding: 10px 30px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Логотип" class = "logo">
+            <h1 class="site-title">Lev's home</h1>
+        </div>
+    </header>
+
+    <main style="margin-top: 10px;">
+        <a onclick="location.href='/dashboard'" class="back-button">&#8592; Назад</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>Название</th>
+                    <th>Адрес</th>
+                    <th>Статус аренды</th>
+                    <th>Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Объект 1</td>
+                    <td>Адрес 1</td>
+                    <td>Свободен</td>
+                    <td><button onclick="location.href='edit_property.html'">Редактировать</button></td>
+                </tr>
+                <tr>
+                    <td>Объект 2</td>
+                    <td>Адрес 2</td>
+                    <td>Занят</td>
+                    <td><button onclick="location.href='edit_property.html'">Редактировать</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>Связь с поддержкой:<a style="word-spacing: 15px;"> +79627012525 Lev.Gorshkov@yandex.ru</a></p>
+        <p>"Lev's home" - данный сайт был сделан в рамках выпускной квалификационной работы и предназначен для демонстрации умений студента Горшкова Льва Александровича группы 32919/12</p>
+    </footer>
+</body>
+</html>

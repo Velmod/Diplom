@@ -1,0 +1,25 @@
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Отступ между кнопками */
+}
+
+.main-button {
+    background: linear-gradient(90deg, #4CAF50, #45a049); /* Градиент для кнопки */
+    color: white;
+    padding: 15px 20px; /* Увеличенные отступы */
+    border: none;
+    border-radius: 8px; /* Закругленные углы */
+    cursor: pointer;
+    font-size: 16px; /* Размер шрифта */
+    transition: all 0.3s ease; /* Плавный переход */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+}
+
+.main-button:hover {
+    background: linear-gradient(90deg, #45a049, #4CAF50); /* Изменение градиента при наведении */
+    transform: translateY(-2px); /* Подъем кнопки при наведении */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Увеличение тени при наведении */
+}

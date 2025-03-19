@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Логотип" class = "logo">
+            <h1 class="site-title">Lev's home</h1>
+        </div>
+        <div class="login-container">
+            <button class="logout-button" onclick="location.href='/logout'">Выход</button>
+        </div>
+    </header>
+
+    <main>
+        <button class="main-button" onclick="location.href='/properties'">Ваши объекты недвижимости</button>
+        <button class="main-button" onclick="location.href='/edit_property'">Добавить объект недвижимости</button>
+    </main>
+
+    <footer>
+        <p>Связь с поддержкой:<a style="word-spacing: 15px;"> +79627012525 Lev.Gorshkov@yandex.ru</a></p>
+        <p>"Lev's home" - данный сайт был сделан в рамках выпускной квалификационной работы и предназначен для демонстрации умений студента Горшкова Льва Александровича группы 32919/12</p>
+    </footer>
+</body>
+</html>

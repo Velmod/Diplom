@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='mod.css') }}">
+    <title>Lev's home</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Логотип" class = "logo">
+            <h1 class="site-title">Lev's home</h1>
+        </div>
+        <div class="login-container">
+            <button class="login-button" onclick="openLoginModal()">Войти</button>
+        </div>
+    </header>
+    <main>
+        <p>Основной контент страницы...</p>
+    </main>
+    <footer>
+        <p>Связь с поддержкой:<a style="word-spacing: 15px;"> +79627012525 Lev.Gorshkov@yandex.ru</a></p>
+        <p>"Lev's home" - данный сайт был сделан в рамках выпускной квалификационной работы и предназначен для демонстрации умений студента Горшкова Льва Александровича группы 32919/12</p>
+    </footer>
+
+    <!-- Модальное окно для авторизации -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2>Авторизация</h2>
+            <form method="POST" action="/login">  <!-- Изменено -->
+                <label for="username">Логин:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Войти</button>
+            </form>
+            <p>Нет аккаунта? <a href="#" onclick="openRegisterModal(); closeLoginModal();">Зарегистрируйтесь здесь</a></p> <!-- Ссылка на регистрацию -->
+        </div>
+    </div>
+
+    <!-- Модальное окно для регистрации -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRegisterModal()">&times;</span>
+            <h2>Регистрация</h2>
+            <form method="POST" action="/register">  <!-- Изменено -->
+                <label for="reg-username">Логин:</label>
+                <input type="text" id="reg-username" name="username" required>
+                <label for="reg-password">Пароль:</label>
+                <input type="password" id="reg-password" name="password" required>
+                <label for="reg-email">Email:</label>
+                <input type="email" id="reg-email" name="email" required>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+            <p>Уже есть аккаунт? <a href="#" onclick="openLoginModal(); closeRegisterModal();">Войдите здесь</a></p> <!-- Ссылка на вход -->
+        </div>
+    </div>
+
+    <script>
+        // Открыть модальное окно для авторизации
+        function openLoginModal() {
+            document.getElementById("loginModal").style.display = "block"; // Открытие модального окна
+        }
+
+        // Закрыть модальное окно для авторизации
+        function closeLoginModal() {
+            document.getElementById("loginModal").style.display = "none"; // Закрытие модального окна
+        }
+
+        // Открыть модальное окно для регистрации
+        function openRegisterModal() {
+            document.getElementById("registerModal").style.display = "block"; // Открытие модального окна
+        }
+
+        // Закрыть модальное окно для регистрации
+        function closeRegisterModal() {
+            document.getElementById("registerModal").style.display = "none"; // Закрытие модального окна
+        }
+
+        // Закрыть модальное окно при нажатии вне его
+        window.onclick = function(event) {
+            const loginModal = document.getElementById("loginModal");
+            const registerModal = document.getElementById("registerModal");
+            if (event.target === loginModal) {
+                closeLoginModal(); // Закрытие модального окна, если кликнули вне его
+            } else if (event.target === registerModal) {
+                closeRegisterModal(); // Закрытие модального окна, если кликнули вне его
+            }
+        }
+    </script>
+</body>
+</html>

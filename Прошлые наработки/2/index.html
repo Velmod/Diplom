@@ -8,6 +8,15 @@
     <title>Lev's home</title>
 </head>
 <body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
     <header>
         <div class="logo-container">
             <img src="D:\Учёба\Практика 02\resourses\logo.png" alt="Логотип" class="logo">
@@ -30,7 +39,7 @@
         <div class="modal-content">
             <span class="close" onclick="closeLoginModal()">&times;</span>
             <h2>Авторизация</h2>
-            <form>
+            <form method="POST" action="/login">  <!-- Изменено -->
                 <label for="username">Логин:</label>
                 <input type="text" id="username" name="username" required>
                 <label for="password">Пароль:</label>
@@ -46,7 +55,7 @@
         <div class="modal-content">
             <span class="close" onclick="closeRegisterModal()">&times;</span>
             <h2>Регистрация</h2>
-            <form>
+            <form method="POST" action="/register">  <!-- Изменено -->
                 <label for="reg-username">Логин:</label>
                 <input type="text" id="reg-username" name="username" required>
                 <label for="reg-password">Пароль:</label>
