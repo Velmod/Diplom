@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="mod.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='mod.css') }}">
     <title>Lev's home</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
     {% endwith %}
     <header>
         <div class="logo-container">
-            <img src="D:\Учёба\Практика 02\resourses\logo.png" alt="Логотип" class="logo">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Логотип" class = "logo">
             <h1 class="site-title">Lev's home</h1>
         </div>
         <div class="login-container">
@@ -39,7 +39,11 @@
         <div class="modal-content">
             <span class="close" onclick="closeLoginModal()">&times;</span>
             <h2>Авторизация</h2>
+<<<<<<<< HEAD:Прошлые наработки/2/index.html
             <form method="POST" action="/login">  <!-- Изменено -->
+========
+            <form method="POST" action="/login">
+>>>>>>>> 313048b (	modified:   app.py):templates/index.html
                 <label for="username">Логин:</label>
                 <input type="text" id="username" name="username" required>
                 <label for="password">Пароль:</label>
@@ -55,7 +59,11 @@
         <div class="modal-content">
             <span class="close" onclick="closeRegisterModal()">&times;</span>
             <h2>Регистрация</h2>
+<<<<<<<< HEAD:Прошлые наработки/2/index.html
             <form method="POST" action="/register">  <!-- Изменено -->
+========
+            <form method="POST" action="/register">
+>>>>>>>> 313048b (	modified:   app.py):templates/index.html
                 <label for="reg-username">Логин:</label>
                 <input type="text" id="reg-username" name="username" required>
                 <label for="reg-password">Пароль:</label>
